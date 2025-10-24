@@ -62,3 +62,24 @@ button {
 button:hover {
   background: #0056b3;
 }
+
+/* Vue mobile*/
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;   /* Passe en colonne */
+  }
+
+  .panel, .preview {
+    max-height: none;         /* Laisse defiler normalement */
+    width: 100%;              /* Prend toute la largeur */
+  }
+
+  .panel {
+    order: 1;                 /* Formulaire en haut */
+  }
+
+  .preview {
+    order: 2;                 /* CV en bas */
+    margin-top: 20px;
+  }
+}
