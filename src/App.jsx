@@ -13,7 +13,7 @@ export default function App(){
   return (
     <div className="app">
       <div className="panel">
-        <h3 style={{color:"#fff"}}>Éditeur</h3>
+        <h3 style={{color:"#1351e2ff"}}>Éditeur</h3>
         <ResumeForm data={data} setData={setData} />
         <div className="controls" style={{ display: "flex", gap: "10px" }}>
           <button onClick={handleExport}>Exporter PDF</button>

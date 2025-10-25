@@ -83,3 +83,11 @@ button:hover {
     margin-top: 20px;
   }
 }
+.panel h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #007bff;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 6px;
+}
