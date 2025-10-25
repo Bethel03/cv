@@ -82,6 +82,7 @@ export default function ResumeForm({data, setData}){
           <button onClick={()=>removeListItem("languages", lang.id)}>Supprimer</button>
         </div>
       ))}
+      <br />
       <button onClick={()=>addListItem("languages",{name:"",level:""})}>Ajouter langue</button>
 
 

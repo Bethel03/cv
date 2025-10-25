@@ -15,7 +15,7 @@ export default function App(){
       <div className="panel">
         <h3 style={{color:"#fff"}}>Éditeur</h3>
         <ResumeForm data={data} setData={setData} />
-        <div className="controls">
+        <div className="controls" style={{ display: "flex", gap: "10px" }}>
           <button onClick={handleExport}>Exporter PDF</button>
           <button className="small" onClick={()=>setData(sampleCV)}>Réinitialiser</button>
         </div>
