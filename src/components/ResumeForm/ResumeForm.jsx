@@ -41,7 +41,7 @@ export default function ResumeForm({data, setData}){
       <Field label="Titre" name="title" value={data.info.title} onChange={handleBasics} />
       <Field label="Email" name="email" value={data.info.email} onChange={handleBasics} />
       <Field label="Téléphone" name="phone" value={data.info.phone} onChange={handleBasics} />
-      <Field label="Localisation" name="location" value={data.info.location} onChange={handleBasics} />
+      <Field label="Adresse" name="location" value={data.info.location} onChange={handleBasics} />
       <Field label="Résumé" name="summary" type="textarea" value={data.info.summary} onChange={handleBasics} />
 
       <h4 style={{color:"#fff"}}>Expérience</h4>
@@ -71,15 +71,16 @@ export default function ResumeForm({data, setData}){
           </div>
         </div>
       ))}
-      <button onClick={()=>addListItem("education",{institution:"",degree:"",start:"",end:""})}>Ajouter éducation</button>
-
+      <div style={{marginBottom:16}}>
+        <button onClick={()=>addListItem("education",{institution:"",degree:"",start:"",end:""})}>Ajouter éducation</button>
+      </div>
 
       <h4>Langues</h4>
       {data.languages.map(lang => (
         <div key={lang.id}>
           <Field label="Langue" value={lang.name} onChange={(e)=>updateListItem("languages", lang.id, "name", e.target.value)} />
           <Field label="Niveau" value={lang.level} onChange={(e)=>updateListItem("languages", lang.id, "level", e.target.value)} />
-          <button onClick={()=>removeListItem("languages", lang.id)}>Supprimer</button>
+          <button style={{marginBottom:16}} onClick={()=>removeListItem("languages", lang.id)}>Supprimer</button>
         </div>
       ))}
       <br />
